@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack --watch",
-    "serve": "webpack serve"
+    "serve": "webpack serve --hot"
   },
   "repository": {
     "type": "git",

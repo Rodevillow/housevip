@@ -2,3 +2,12 @@ body {
     background-color: $bg-color;
     color: $text-color;
 }
+
+.container {
+    max-width: 1110px;
+    margin: auto;
+
+    @media screen and (min-width: 1166px) {
+        padding: 50px;
+    }
+}
