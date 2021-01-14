@@ -3,7 +3,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const fs = require('fs');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
   style: './src/scss/style.scss',
@@ -59,6 +59,26 @@ module.exports = {
               'sass-loader'
           ]
       },
+      {
+          test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
+          use: [{
+              loader: 'file-loader',
+              options: {
+                  name: '[name].[ext]',
+                  outputPath: 'fonts/'
+              },
+          }]
+      },
+      {
+          test: /\.(jpe?g|png|gif|svg)$/i,
+          use: [{
+              loader: 'file-loader',
+              options: {
+                  name: '[name].[ext]',
+                  outputPath: 'images/'
+              }
+          }]
+      }
     ]
   },
   plugins: [
@@ -67,5 +87,17 @@ module.exports = {
         template: `${PAGES_DIR}/${page}`,
         filename: `./${page.replace(/\.pug/, '.html')}`
     })),
+    new CopyWebpackPlugin({
+      patterns: [
+          {
+              from: 'src/assets/fonts',
+              to: 'fonts'
+          },
+          {
+              from: 'src/assets/images',
+              to: 'images'
+          },
+      ],
+  })
   ]
 };

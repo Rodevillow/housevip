@@ -1,6 +1,45 @@
 extends ../layout/main.pug
 
 block content
-    section
-        h1 Randomize
-        p some paragraph content
+    section#welcome
+        .welcome__content
+            h1 Жилой комплекс <br> в историческом центре
+            .mouse-icon
+                include ../../assets/images/svg/mouse.svg
+        .welcome__bottom-info
+            .welcome__bottom-info-items
+                span.welcome__bottom-info-item
+                    span.place-icon
+                        include ../../assets/images/svg/place.svg
+                    span.welcome__bottom-info-item-text Наб. реки Фонтанки 10-15
+                span.welcome__bottom-info-item
+                    span.phone-icon
+                        include ../../assets/images/svg/phone.svg
+                    span.welcome__bottom-info-item-text 8 (812) 123-45-67
+    section#testimonials
+        .testimonials__content
+            .testimonials__item
+                span.testimonials__item-icon
+                    include ../../assets/images/svg/bench.svg
+                span.testimonials__item-description Рядом исторические <br> парки и скверы
+            .testimonials__item
+                span.testimonials__item-icon
+                    include ../../assets/images/svg/building.svg
+                span.testimonials__item-description Полностью <br> обустроенный
+            .testimonials__item
+                span.testimonials__item-icon
+                    include ../../assets/images/svg/fountain.svg
+                span.testimonials__item-description 10 фонтанов <br> на территории
+            .testimonials__item
+                span.testimonials__item-icon
+                    include ../../assets/images/svg/bicycle.svg
+                span.testimonials__item-description 6 км <br> велодорожек
+    //- section#appartments
+    //-     h2 Наши квартиры
+    //-     .appartments__content
+    //-         .appartments__item one
+    //-         .appartments__item two
+    //-         .appartments__item three
+    //-         .appartments__item four
+
+            

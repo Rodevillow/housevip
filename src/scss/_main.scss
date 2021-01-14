@@ -1,13 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: $bg-color;
     color: $text-color;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     max-width: 1110px;
     margin: auto;
 
-    @media screen and (min-width: 1166px) {
-        padding: 50px;
+    @media screen and (max-width: 1166px) {
+        padding: 0 25px;
     }
 }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo {
+    
+    &__title {
+        font-family: Post No Bills Jaffna SemiBold;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 54px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    &__sub-title {
+        font-family: Raleway;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.1em;
+        text-align: left;
+    }
+
+}
+
+.menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__items {
+        display: flex;
+    }
+
+    &__item {
+        margin-left: 40px;
+        font-family: Raleway;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        text-align: left;
+        cursor: default;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+        }
+    }
+}
+
+h1 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+    text-align: center;
+    color: $text-color-header;
+}
+
+h2 {
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    color: $text-color-header;
+}
+
+.sunset-bg {
+    max-height: 100vh;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+// SECTION #welcome
+section#welcome {
+    height: calc(100vh - 78px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .welcome {
+        position: relative;
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .mouse-icon {
+                margin-top: 100px;
+            }
+        }
+
+        &__bottom-info {
+            position: absolute;
+            bottom: 70px;
+
+            &-items {
+                display: flex;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                margin: 0 50px;
+
+                &-text {
+                    font-family: Raleway;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 21px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }   
+}
+
+// SECTION #testimonials
+section#testimonials {
+    display: flex;
+    justify-content: center;
+    .testimonials {
+        &__content {
+            display: flex;
+            justify-content: center;
+            padding: 120px 0;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 35px;
+            width: 185px;
+
+            &-icon {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 50px;
+            }
+
+            &-description {
+                font-family: Roboto, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 27px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// SECTION #appartments
+// section#appartments {
+//     .appartments {
+//         &__content {
+//             margin-top: 100px;
+//         }
+//     }
+// }
