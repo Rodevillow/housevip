@@ -1,7 +1,8 @@
 extends ../layout/main.pug
 
 block content
-    section#welcome
+    
+    section#welcome.container
         .welcome__content
             h1 Жилой комплекс <br> в историческом центре
             .mouse-icon
@@ -16,7 +17,8 @@ block content
                     span.phone-icon
                         include ../../assets/images/svg/phone.svg
                     span.welcome__bottom-info-item-text 8 (812) 123-45-67
-    section#testimonials
+                            
+    section#testimonials.container
         .testimonials__content
             .testimonials__item
                 span.testimonials__item-icon
@@ -34,7 +36,8 @@ block content
                 span.testimonials__item-icon
                     include ../../assets/images/svg/bicycle.svg
                 span.testimonials__item-description 6 км <br> велодорожек
-    section#appartments
+    
+    section#appartments.container
         h2 Наши квартиры
         .appartments__content
             .appartments__item
@@ -49,5 +52,20 @@ block content
             .appartments__item
                 img(src="/images/room_4.jpeg", alt="Four")
                 span.appartments__item-title.left-with-padding Лофт — 2 этажа
-
-            
+    
+    img.bg-down-town(src="/images/DownTown.png", alt="DownTown")
+    section#cta.container
+        h2 Хотите посмотреть?
+        .cta__content
+            .cta__content-left
+                p Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. 
+            .cta__content-right
+                .cta__content-right_item
+                    input.input(type="text" placeholder="Ваше имя")
+                .cta__content-right_item
+                    input.input(type="text" placeholder="Ваш телефон")
+                .cta__content-right_item
+                    span *Мы никому не передаем ваши данные. И не сохраняем ваш номер в базу.
+                .cta__content-right_item
+                    button.btn-default Посмотреть район
+        

@@ -9,6 +9,7 @@ body {
     color: $text-color;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -103,12 +104,50 @@ h2 {
     color: $text-color-header;
 }
 
+.input {
+    background: $bg-light;
+    opacity: 0.2;
+    height: 50px;
+    width: 100%;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 27px;
+    color: $text-color-dark;
+
+    text-align: center;
+    border: none;
+
+    &::placeholder {
+        color: #BEBEBE;
+    }
+}
+
+.btn-default {
+    background-color: #D4C17F;
+    height: 50px;
+    width: 100%;
+    border: none;
+
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $text-color;
+}
+
 .sunset-bg {
     max-height: 100vh;
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
+    width: auto;
 }
 
 // SECTION #welcome
@@ -243,6 +282,69 @@ section#appartments {
 
                 &.left-with-padding {
                     left: 85px;
+                }
+            }
+        }
+    }
+}
+
+// SECTION #cta
+img.bg-down-town {
+    position: absolute;
+    z-index: -1;
+    height: 560px;
+    width: 100%;
+}
+section#cta {
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .cta {
+        &__content {
+            width: 100%;   
+            display: flex;
+            margin-top: 25px;
+
+            &-left {
+                width: 50%;
+                display: flex;
+                align-items: flex-end;
+
+                p {
+                    font-family: Raleway;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                }
+            }
+
+            &-right {
+                width: 50%;
+
+                display: flex;
+                flex-wrap: wrap;
+
+                &_item {
+                    flex: 1 0 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+
+                    span {
+                        font-family: Raleway;
+                        font-size: 13px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 16px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                    }
                 }
             }
         }
