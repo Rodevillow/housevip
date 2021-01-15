@@ -350,3 +350,33 @@ section#cta {
         }
     }
 }
+
+// SECTION #video
+section#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .video {
+        position: relative;
+
+        img {
+            display: block;
+            width: 719px;
+            height: 650px;
+        }
+
+        .mute {
+            position: absolute;
+            background-color: #232c32ab;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
