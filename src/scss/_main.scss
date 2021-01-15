@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -195,10 +196,55 @@ section#testimonials {
 }
 
 // SECTION #appartments
-// section#appartments {
-//     .appartments {
-//         &__content {
-//             margin-top: 100px;
-//         }
-//     }
-// }
+section#appartments {
+    .appartments {
+        &__content {
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            flex: 1 0 50%;
+            padding-bottom: 30px;
+            position: relative;
+
+            &:nth-child(odd) {
+                padding-right: 15px;
+            }
+
+            &:nth-child(even) {
+                padding-left: 15px;
+            }
+
+            img {
+                display: block;
+                position:relative;
+                z-index:-1;
+
+                max-width: 100%;
+
+                mask-image: linear-gradient(to top, rgba(36, 43, 51, 0) 0%, #242B33 100%);
+                -webkit-mask-image: linear-gradient(to top, rgba(36, 43, 51, 0) 0%, #242B33 100%);
+            }
+
+            &-title {
+                position: absolute;
+                bottom: 70px;
+                left: 70px;
+
+                font-family: Raleway;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                &.left-with-padding {
+                    left: 85px;
+                }
+            }
+        }
+    }
+}
