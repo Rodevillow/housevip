@@ -82,6 +82,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new CleanWebpackPlugin({cleanStaleWebpackAssets: false}),
     ...PAGES.map(page => new HtmlWebpackPlugin({
         template: `${PAGES_DIR}/${page}`,
