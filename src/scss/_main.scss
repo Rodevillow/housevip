@@ -195,8 +195,18 @@ section#welcome {
 
 // SECTION #testimonials
 section#testimonials {
+    position: relative;
     display: flex;
     justify-content: center;
+
+    span.second-icon {
+        display: block;
+        position: absolute;
+        right: -180px;
+        margin-top: 105px;
+        z-index: -1;
+    }
+
     .testimonials {
         &__content {
             display: flex;
@@ -231,6 +241,16 @@ section#testimonials {
 
 // SECTION #appartments
 section#appartments {
+    position: relative;
+
+    span.third-icon {
+        display: block;
+        position: absolute;
+        left: -211px;
+        margin-top: 88px;
+        z-index: -1;
+    }
+
     .appartments {
         &__content {
             margin-top: 100px;
@@ -352,6 +372,15 @@ section#video {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+
+    span.fourth-icon {
+        display: block;
+        position: absolute;
+        right: -211px;
+        margin-top: 88px;
+        z-index: -1;
+    }
 
     .video {
         position: relative;
@@ -379,6 +408,16 @@ section#video {
 // SECTION #map
 section#map {
     margin-top: 100px;
+    position: relative;
+
+    span.fifth-icon {
+        display: block;
+        position: absolute;
+        left: -137px;
+        margin-top: 100px;
+        z-index: -1;
+    }
+
     .map {
         margin-top: 100px;
         margin-bottom: 180px;
